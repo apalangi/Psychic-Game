@@ -60,12 +60,14 @@ document.onkeyup = function(event) {
     if (left > 0) {
         if (userGuess == psychicLetter) {
         	wins++;
-        	document.getElementById("wins").innerHTML = "Wins:" + wins;
+            document.getElementById("wins").innerHTML = "Wins:" + wins;
+            alert("Congratulations I was thinking of " + psychicLetter + ".");
             newGame();
         }
     } else if (left == 0) {
     	losses++;
-    	document.getElementById("losses").innerHTML = "Losses:" + losses;
+        document.getElementById("losses").innerHTML = "Losses:" + losses;
+        alert("I am sorry you are incorrect, I was thinking of " + psychicLetter + ". ");
         newGame();
     }
 };
